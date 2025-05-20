@@ -1,0 +1,8 @@
+# GIMP gimp-rect-select-tool options
+
+(aspect-denominator 144)
+(aspect-numerator 144)
+(round-corners yes)
+(corner-radius 25)
+
+# end of gimp-rect-select-tool options
