@@ -1,10 +1,12 @@
--- To Toggle NvimTree
-vim.keymap.set("n", "<leader>n", vim.cmd.NvimTreeToggle)
+local map = vim.keymap.set
 
 -- To not copy the highlight pasted text
-vim.keymap.set("x", "<leader>p", "\"_dP")
+map("x", "<leader>p", "\"_dP")
 
 -- To copy to system clipboard
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
+map({"n", "v"}, "<leader>y", [["+y]])
+map("n", "<leader>Y", [["+Y]])
 
+-- nvimtree
+map("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "nvimtree toggle window" })
+map("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "nvimtree focus window" })

@@ -5,7 +5,7 @@ return {
 		"xiyaowong/transparent.nvim",
 		lazy = false,
 		priority = 1000,
-	},
+    },
 
     -- Colorizer
     {
@@ -50,6 +50,10 @@ return {
         dependencies = {
             "nvim-tree/nvim-web-devicons",
         },
+        cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+        opts = function()
+            return require "karadi.configs.nvimtree"
+        end,
     },
 
 	-- Colorscheme
@@ -71,10 +75,18 @@ return {
 				indent = { enable = true },
 				-- Add other modules and options here if needed
 			})
-		end,
-	},
+        end,
+    },
+    
+    -- Language parser or something
+    { "mason-org/mason.nvim" },
 
-	-- Language parser or something
-	{ "mason-org/mason.nvim" },
-
+    -- Character autopairs
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
+        -- use opts = {} for passing setup options
+        -- this is equivalent to setup({}) function
+    },
 }

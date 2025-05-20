@@ -1,7 +1,6 @@
 require("config.lazy")
 require("karadi.remaps")
 require("karadi.sets")
-vim.g.nvim_tree_respect_buf_cwd = 1
 require("karadi.configs.nvimtree")
 require("mason").setup()
 require("wilder")
