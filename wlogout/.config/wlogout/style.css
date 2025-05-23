@@ -1,0 +1,97 @@
+* {
+    background-image: none;
+    font-size: 18px;
+    font-family: "JetBrainsMonoNerdFont";
+}
+
+window {
+    background-color: rgba(18, 18, 18, 0.25);
+}
+
+button {
+    color: #f2f2f2;
+    background-color: rgba(18, 18, 18, 1);
+    outline-style: none;
+    border: none;
+    border-width: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%;
+    border-radius: 0px;
+    box-shadow: none;
+    text-shadow: none;
+    animation: gradient_f 20s ease-in infinite;
+}
+
+button:hover, button:focus {
+    background-color: #f2f2f2;
+    background-size: 30%;
+    color: #121212;
+}
+
+button:focus#lock {
+    border-radius: 25px;
+    margin : 25px 0px 25px 25px;
+}
+
+button:focus#logout {
+    border-radius: 25px;
+    margin : 25px 0px 25px 0px;
+}
+
+button:focus#suspend {
+    border-radius: 25px;
+    margin : 25px 0px 25px 0px;
+}
+
+button:focus#shutdown {
+    border-radius: 25px;
+    margin : 25px 0px 25px 0px;
+}
+
+button:focus#hibernate {
+    border-radius: 25px;
+    margin : 25px 0px 25px 0px;
+}
+
+button:focus#reboot {
+    border-radius: 25px;
+    margin : 25px 25px 25px 0px;
+}
+
+
+#lock {
+    background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+    border-radius: 16px 0px 0px 16px;
+    margin : 50px 0px 50px 0px;
+}
+
+#logout {
+    background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+    border-radius: 0px 0px 0px 0px;
+    margin : 50px 0px 50px 0px;
+}
+
+#suspend {
+    background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+    border-radius: 0px 0px 0px 0px;
+    margin : 50px 0px 50px 0px;
+}
+
+#hibernate {
+    background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+    border-radius: 0px 0px 0px 0px;
+    margin : 50px 0px 50px 0px;
+}
+
+#shutdown {
+    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+    border-radius: 0px 0px 0px 0px;
+    margin : 50px 0px 50px 0px;
+}
+
+#reboot {
+    background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+    border-radius: 0px 16px 16px 0px;
+    margin : 50px 0px 50px 0px;
+}
