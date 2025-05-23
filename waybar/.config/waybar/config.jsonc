@@ -22,7 +22,7 @@
     "modules-right": [
         "mpd",
         "pulseaudio",
-        "network",
+        "group/net",
         "group/system",
         "backlight",
         "custom/brightness",
@@ -89,14 +89,41 @@
         "ignored-sinks": ["Easy Effects Sink"],
         "max-volume": 150
     },
+    "group/net": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 250,
+            "children-class": "not-cpu",
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "network",
+            "network#speed"
+        ]
+    },
     "network": {
         "interval": 5,
-        "format-wifi": "{essid} ",
+        "format-wifi": "{bandwidthDownBits}⇣{essid} ",
         "format-ethernet": "<span font='12' rise='-1000'></span>  Ethernet",
-        "tooltip-format": "󰛳 {ifname} 󰛴 {bandwidthDownBytes} 󰛶 {bandwidthUpBytes}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip": false,
+        "tooltip-format": "{bandwidthDownBits}⇣ {bandwidthUpBits}⇡"
+    },
+    "network#speed": {
+        "interval": 1,
+        "format": "{ifname}",
+        "format-wifi": " {bandwidthDownBytes}  {bandwidthUpBytes} ",
+        "format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes} ",
+        "format-disconnected": "󰌙",
+        "tooltip-format": "{ipaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+        "tooltip-format-ethernet": "{ifname} 󰌘",
+        "tooltip-format-disconnected": "󰌙 Disconnected",
+        "max-length": 30,
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
     },
     "group/system": {
         "orientation": "inherit",

@@ -22,7 +22,7 @@ tooltip label {
     color: @background;
 }
 
-#clock, #pulseaudio, #network, #mpris, #system, #cpu, #memory, #backlight, #custom-brightness, #battery, #tray {
+#clock, #pulseaudio, #mpris, #network, #cpu, #memory, #backlight, #custom-brightness, #battery, #tray {
     margin: 0px 10px;
 }
 
@@ -54,7 +54,7 @@ tooltip label {
     border-radius: 5px;
 }
 
-#system {
+#net:hover , #system:hover {
     background-color: @light;
     color: @background;
     border-radius: 5px;
