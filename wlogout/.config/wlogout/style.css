@@ -61,37 +61,46 @@ button:focus#reboot {
 
 
 #lock {
-    background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+    background-image: image(url("/home/Karadi/.config/wlogout/icons/lock_white.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+    border-radius: 16px 0px 0px 16px;
+    margin : 50px 0px 50px 0px;
+}
+#lock:focus, #lock:hover {
+    background-image: image(url("/home/Karadi/.config/wlogout/icons/lock_black.png"), url("/usr/local/share/wlogout/icons/lock.png"));
     border-radius: 16px 0px 0px 16px;
     margin : 50px 0px 50px 0px;
 }
 
 #logout {
-    background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+    background-image: image(url("/home/Karadi/.config/wlogout/icons/logout_white.png"), url("/usr/local/share/wlogout/icons/logout.png"));
     border-radius: 0px 0px 0px 0px;
     margin : 50px 0px 50px 0px;
 }
-
-#suspend {
-    background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
-    border-radius: 0px 0px 0px 0px;
-    margin : 50px 0px 50px 0px;
-}
-
-#hibernate {
-    background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+#logout:focus, #logout:hover {
+    background-image: image(url("/home/Karadi/.config/wlogout/icons/logout_black.png"), url("/usr/local/share/wlogout/icons/logout.png"));
     border-radius: 0px 0px 0px 0px;
     margin : 50px 0px 50px 0px;
 }
 
 #shutdown {
-    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+    background-image: image(url("/home/Karadi/.config/wlogout/icons/shutdown_white.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+    border-radius: 0px 0px 0px 0px;
+    margin : 50px 0px 50px 0px;
+}
+#shutdown:focus, #shutdown:hover {
+    background-image: image(url("/home/Karadi/.config/wlogout/icons/shutdown_black.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
     border-radius: 0px 0px 0px 0px;
     margin : 50px 0px 50px 0px;
 }
 
 #reboot {
-    background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+    background-image: image(url("/home/Karadi/.config/wlogout/icons/reboot_white.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+    border-radius: 0px 16px 16px 0px;
+    margin : 50px 0px 50px 0px;
+}
+
+#reboot:focus, #reboot:hover {
+    background-image: image(url("/home/Karadi/.config/wlogout/icons/reboot_black.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
     border-radius: 0px 16px 16px 0px;
     margin : 50px 0px 50px 0px;
 }
