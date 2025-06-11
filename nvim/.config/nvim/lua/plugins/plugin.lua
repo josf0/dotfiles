@@ -89,4 +89,13 @@ return {
         -- use opts = {} for passing setup options
         -- this is equivalent to setup({}) function
     },
+
+    -- NvChad Terminal
+    {
+        "NvChad/nvterm",
+        config = function ()
+            require("nvterm").setup()
+        end,
+    },
+
 }

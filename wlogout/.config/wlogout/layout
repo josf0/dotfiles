@@ -14,7 +14,7 @@
 
 {
     "label" : "shutdown",
-    "action" : "sudo runit-init 0",
+    "action" : "shutdown now",
     "text" : "Shutdown",
     "keybind" : "s"
 }
