@@ -103,7 +103,7 @@
     },
     "network": {
         "interval": 5,
-        "format-wifi": "{bandwidthDownBits}⇣{essid} ",
+        "format-wifi": "{essid} ",
         "format-ethernet": "<span font='12' rise='-1000'></span>  Ethernet",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
@@ -170,9 +170,9 @@
     "battery": {
         "interval": 60,
         "format": "<span font='13' rise='-1000'>󰁹</span> {capacity}%",
-        "format-full": "<span font='13' rise='-1000'>󰁹</span> {capacity}%",
-        "format-charging": "<span font='13' rise='-1000'>󰂄</span>  {capacity}%",
-        "format-discharging": "<span font='13' rise='-1000'>󰁼</span> {capacity}%",
+        "format-full": "<span font='13' rise='-1000'>󰁹</span> {capacity}% FUL",
+        "format-charging": "<span font='13' rise='-1000'>󰂄</span>  {capacity}% CHR",
+        "format-discharging": "<span font='13' rise='-1000'>󰁼</span> {capacity}% DIS",
         "max-length": 25
     },
     "tray": {

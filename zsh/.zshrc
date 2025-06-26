@@ -1,8 +1,4 @@
 
-# ░█▀█░█░░░▀█▀░█▀█░█▀▀░█▀▀░█▀▀
-# ░█▀█░█░░░░█░░█▀█░▀▀█░█▀▀░▀▀█
-# ░▀░▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀▀▀
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -21,6 +17,13 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
+#
+# ~/.zprofile (for login shells)
+# and ~/.zshrc (for interactive shells) :
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -106,6 +109,10 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# ░█▀█░█░░░▀█▀░█▀█░█▀▀░█▀▀░█▀▀
+# ░█▀█░█░░░░█░░█▀█░▀▀█░█▀▀░▀▀█
+# ░▀░▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀▀▀
+
 alias vi="nvim"
 alias laa="ls -a"
 alias nv="nvim"
@@ -114,7 +121,18 @@ alias yeet="yay -Rns"
 alias hyprconf="nv ~/.config/hypr/hyprland.conf"
 alias waybarconf="nv ~/.config/waybar/config.jsonc"
 alias nvimconf="cd ~/.config/nvim/"
-alias update="sudo pacman -Syu && yay"
+alias update="sudo pacman -Syu && yay && exec ~/Scripts/immich-update.sh"
 alias ssh="TERM=xterm ssh"
 alias maven_connect_server="sudo openvpn --config ~/Licenses/sslvpn-br51_jjohnson-client-config.ovpn"
-alias maven_enter_server="ssh -X JJohnson@172.16.17.6"
+alias maven_enter_server="ssh -Y -C JJohnson@172.16.17.6"
+alias night_on="hyprctl hyprsunset temperature 4500"
+alias night_off="hyprctl hyprsunset temperature 6000"
+
+# Created by `pipx` on 2025-06-15 05:38:05
+export PATH="$PATH:/home/Karadi/.local/bin"
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/Karadi/.dart-cli-completion/zsh-config.zsh ]] && . /home/Karadi/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
