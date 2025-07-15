@@ -6,6 +6,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# pyenv init
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -20,10 +25,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 #
 # ~/.zprofile (for login shells)
 # and ~/.zshrc (for interactive shells) :
-
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -118,13 +119,10 @@ alias laa="ls -a"
 alias nv="nvim"
 alias yaay="yay -S --needed"
 alias yeet="yay -Rns"
-alias hyprconf="nv ~/.config/hypr/hyprland.conf"
-alias waybarconf="nv ~/.config/waybar/config.jsonc"
-alias nvimconf="cd ~/.config/nvim/"
-alias update="sudo pacman -Syu && yay && exec ~/Scripts/immich-update.sh"
+alias update="sudo pacman -Syu && yay && exec ~/scripts/immich-update.sh"
 alias ssh="TERM=xterm ssh"
-alias maven_connect_server="sudo openvpn --config ~/Licenses/sslvpn-br51_jjohnson-client-config.ovpn"
-alias maven_enter_server="ssh -Y -C JJohnson@172.16.17.6"
+alias maven_connect_server="sudo openvpn --config ~/licenses/sslvpn-br51_jjohnson-client-config.ovpn"
+alias maven_enter_server="ssh -X JJohnson@172.16.17.6"
 alias night_on="hyprctl hyprsunset temperature 4500"
 alias night_off="hyprctl hyprsunset temperature 6000"
 
@@ -135,4 +133,3 @@ export PATH="$PATH:/home/Karadi/.local/bin"
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /home/Karadi/.dart-cli-completion/zsh-config.zsh ]] && . /home/Karadi/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
-
