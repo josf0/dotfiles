@@ -1,4 +1,3 @@
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -125,6 +124,7 @@ alias maven_connect_server="sudo openvpn --config ~/licenses/sslvpn-br51_jjohnso
 alias maven_enter_server="ssh -X JJohnson@172.16.17.6"
 alias night_on="hyprctl hyprsunset temperature 4500"
 alias night_off="hyprctl hyprsunset temperature 6000"
+alias comfyui="source /home/Karadi/storage/llm/comfy-env/bin/activate && comfy --workspace=/home/Karadi/storage/llm/comfy-ui launch"
 
 # Created by `pipx` on 2025-06-15 05:38:05
 export PATH="$PATH:/home/Karadi/.local/bin"
@@ -133,3 +133,5 @@ export PATH="$PATH:/home/Karadi/.local/bin"
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /home/Karadi/.dart-cli-completion/zsh-config.zsh ]] && . /home/Karadi/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
+
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
